@@ -14,6 +14,7 @@ script = ExtResource("1_uu6xs")
 position_smoothing_enabled = true
 
 [node name="Speed_display" type="Label" parent="Camera2D" unique_id=1334152768]
+z_index = 30
 offset_left = 108.0
 offset_top = 221.0
 offset_right = 406.0
@@ -23,8 +24,8 @@ text = "Speed: "
 
 [node name="walls" parent="." unique_id=189394994 instance=ExtResource("3_r0du0")]
 position = Vector2(-585, -4)
-rotation = -1.5707964
+rotation = 1.5707964
 
 [node name="walls2" parent="." unique_id=172413421 instance=ExtResource("3_r0du0")]
 position = Vector2(524, -4)
-rotation = 1.5707964
+rotation = -1.5707964
