@@ -6,3 +6,5 @@
 position = Vector2(0, 4)
 
 [node name="Player" parent="." unique_id=1147482885 instance=ExtResource("1_glv2v")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=464201234]
