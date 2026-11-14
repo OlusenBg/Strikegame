@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 @export var speed_increase = 100
-@export var speed: float = 200.0
+@export var speed: float = 0
 @export var speed_limit = 5000
 
 
@@ -18,7 +18,7 @@ func _physics_process(delta: float) -> void:
 		input.x += 1
 		print(speed)
 		velocity = input.normalized() * speed
-		speed = 200
+		speed = 0
 	
 	if Input.is_action_pressed("left"):
 		if speed < speed_limit:
@@ -28,7 +28,7 @@ func _physics_process(delta: float) -> void:
 		input.x -= 1
 		print(speed)
 		velocity = input.normalized() * speed
-		speed = 200
+		speed = 0
 	
 	
 	if Input.is_action_pressed("up"):
@@ -39,7 +39,7 @@ func _physics_process(delta: float) -> void:
 		input.y -= 1
 		print(speed)
 		velocity = input.normalized() * speed
-		speed = 200
+		speed = 0
 	
 	
 	if Input.is_action_pressed("down"):
@@ -50,7 +50,7 @@ func _physics_process(delta: float) -> void:
 		input.y += 1
 		
 		velocity = input.normalized() * speed
-		speed = 200
+		speed = 0
 	
 	
 	
