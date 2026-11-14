@@ -2,12 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://dqb7bb84gw7hh" path="res://player.tscn" id="1_glv2v"]
 [ext_resource type="Script" uid="uid://keusc4qhk3oi" path="res://CameraMovement.gd" id="1_uu6xs"]
+[ext_resource type="PackedScene" uid="uid://ce4hk6tf8lxq" path="res://bouncewalls.tscn" id="3_r0du0"]
 
 [node name="Node2D" type="Node2D" unique_id=1622507801]
 position = Vector2(0, 4)
 script = ExtResource("1_uu6xs")
 
-[node name="Player" parent="." unique_id=1147482885 instance=ExtResource("1_glv2v")]
+[node name="Player" parent="." unique_id=1147482885 groups=["player"] instance=ExtResource("1_glv2v")]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=464201234]
 position_smoothing_enabled = true
@@ -19,3 +20,11 @@ offset_right = 406.0
 offset_bottom = 309.0
 theme_override_font_sizes/font_size = 64
 text = "Speed: "
+
+[node name="walls" parent="." unique_id=189394994 instance=ExtResource("3_r0du0")]
+position = Vector2(-585, -4)
+rotation = -1.5707964
+
+[node name="walls2" parent="." unique_id=172413421 instance=ExtResource("3_r0du0")]
+position = Vector2(524, -4)
+rotation = 1.5707964
