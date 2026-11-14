@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-@export var speed_increase = 100
+@export var speed_increase = 75
 @export var speed: float = 0
-@export var speed_limit = 5000
+@export var speed_limit = 3000
 var charged = false
 
 func _physics_process(delta: float) -> void:

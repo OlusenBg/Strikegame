@@ -3,8 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://dqb7bb84gw7hh" path="res://player.tscn" id="1_glv2v"]
 [ext_resource type="Script" uid="uid://keusc4qhk3oi" path="res://CameraMovement.gd" id="1_uu6xs"]
 [ext_resource type="PackedScene" uid="uid://ce4hk6tf8lxq" path="res://bouncewalls.tscn" id="3_r0du0"]
+[ext_resource type="PackedScene" uid="uid://vypgufko4wtq" path="res://normalwalls.tscn" id="4_cm0pq"]
+[ext_resource type="PackedScene" uid="uid://8a146ljcpp1v" path="res://spiked_walls.tscn" id="5_fos0i"]
 
-[node name="Node2D" type="Node2D" unique_id=1622507801]
+[node name="Game" type="Node2D" unique_id=1622507801]
 position = Vector2(0, 4)
 script = ExtResource("1_uu6xs")
 
@@ -22,10 +24,85 @@ offset_bottom = 309.0
 theme_override_font_sizes/font_size = 64
 text = "Speed: "
 
-[node name="walls" parent="." unique_id=189394994 instance=ExtResource("3_r0du0")]
-position = Vector2(-585, -4)
+[node name="tutorial" type="Node2D" parent="." unique_id=990749453]
+
+[node name="walls" parent="tutorial" unique_id=189394994 instance=ExtResource("3_r0du0")]
+position = Vector2(82.999756, 184.99994)
+rotation = -0.7853982
+right_tilted = true
+
+[node name="walls2" parent="tutorial" unique_id=172413421 instance=ExtResource("3_r0du0")]
+position = Vector2(-16, -1165)
+rotation = 3.1415927
+scale = Vector2(1.3, 1)
+
+[node name="Label" type="Label" parent="tutorial" unique_id=3059984]
+offset_left = -196.0
+offset_top = -310.0
+offset_right = 197.0
+offset_bottom = -217.0
+theme_override_font_sizes/font_size = 32
+text = "              Welcome,
+       use wasd to charge
+       use arrows to move"
+
+[node name="Normalwalls" parent="tutorial" unique_id=974586526 instance=ExtResource("4_cm0pq")]
+position = Vector2(41, 338)
+scale = Vector2(4.5, 1)
+
+[node name="Normalwalls2" parent="tutorial" unique_id=240566222 instance=ExtResource("4_cm0pq")]
+position = Vector2(591, -185)
+rotation = -1.5707964
+scale = Vector2(4, 1)
+
+[node name="Normalwalls3" parent="tutorial" unique_id=671336123 instance=ExtResource("4_cm0pq")]
+position = Vector2(-608, -121)
+rotation = 1.5707964
+scale = Vector2(4, 1)
+
+[node name="Normalwalls4" parent="tutorial" unique_id=1154492239 instance=ExtResource("4_cm0pq")]
+position = Vector2(378.00003, -638)
+scale = Vector2(1.5, 1)
+
+[node name="Normalwalls5" parent="tutorial" unique_id=1559764273 instance=ExtResource("4_cm0pq")]
+position = Vector2(-360, -644)
+scale = Vector2(1.5, 1)
+
+[node name="Normalwalls6" parent="tutorial" unique_id=1083645131 instance=ExtResource("4_cm0pq")]
+position = Vector2(197, -950)
+rotation = -1.5707964
+scale = Vector2(2, 1)
+
+[node name="Normalwalls7" parent="tutorial" unique_id=1322049703 instance=ExtResource("4_cm0pq")]
+position = Vector2(-216, -793)
 rotation = 1.5707964
 
-[node name="walls2" parent="." unique_id=172413421 instance=ExtResource("3_r0du0")]
-position = Vector2(524, -4)
-rotation = -1.5707964
+[node name="Label2" type="Label" parent="tutorial" unique_id=1363766885]
+offset_left = -87.0
+offset_top = -1105.0
+offset_right = 88.0
+offset_bottom = -1012.0
+theme_override_font_sizes/font_size = 32
+text = "green walls
+bounce"
+
+[node name="Normalwalls8" parent="tutorial" unique_id=133141733 instance=ExtResource("4_cm0pq")]
+position = Vector2(-602, -900)
+scale = Vector2(3, 1)
+
+[node name="Normalwalls9" parent="tutorial" unique_id=1333130230 instance=ExtResource("4_cm0pq")]
+position = Vector2(-393, -1162)
+scale = Vector2(1.7, 1)
+
+[node name="spiked_walls" parent="tutorial" unique_id=204365815 instance=ExtResource("5_fos0i")]
+position = Vector2(-967, -1055)
+rotation = 1.5707964
+
+[node name="Label3" type="Label" parent="tutorial" unique_id=910953420]
+offset_left = -900.0
+offset_top = -1094.0
+offset_right = -658.0
+offset_bottom = -1001.0
+theme_override_font_sizes/font_size = 32
+text = "Spiked walls 
+       kill you"
