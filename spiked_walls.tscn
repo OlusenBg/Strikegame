@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://8a146ljcpp1v"]
+
+[ext_resource type="Script" uid="uid://sqbfxfxk3gig" path="res://spiked_walls.gd" id="1_3jfk2"]
+[ext_resource type="Texture2D" uid="uid://db8i5dd0vnqd0" path="res://icon.svg" id="2_23b20"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t71yc"]
+size = Vector2(262, 65)
+
+[node name="spiked_walls" type="Area2D" unique_id=204365815]
+script = ExtResource("1_3jfk2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1544598881]
+position = Vector2(-13, 14.5)
+shape = SubResource("RectangleShape2D_t71yc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1347106826]
+position = Vector2(-15.599998, 17.5)
+scale = Vector2(2.05625, 0.5546875)
+texture = ExtResource("2_23b20")
+
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
