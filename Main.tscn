@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://bupe2hnvcg4qy"]
 
 [ext_resource type="PackedScene" uid="uid://dqb7bb84gw7hh" path="res://player.tscn" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://keusc4qhk3oi" path="res://CameraMovement.gd" id="1_uu6xs"]
 
 [node name="Node2D" type="Node2D" unique_id=1622507801]
 position = Vector2(0, 4)
+script = ExtResource("1_uu6xs")
 
 [node name="Player" parent="." unique_id=1147482885 instance=ExtResource("1_glv2v")]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=464201234]
+position_smoothing_enabled = true
