@@ -17,7 +17,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_released("right"):
 		input.x += 1
 		print(speed)
-		velocity = input.normalized() * speed
+		velocity = input.normalized() * speed * delta
 		speed = 0
 	
 	if Input.is_action_pressed("left"):
@@ -27,7 +27,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_released("left"):
 		input.x -= 1
 		print(speed)
-		velocity = input.normalized() * speed
+		velocity = input.normalized() * speed * delta
 		speed = 0
 	
 	
@@ -38,7 +38,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_released("up"):
 		input.y -= 1
 		print(speed)
-		velocity = input.normalized() * speed
+		velocity = input.normalized() * speed * delta
 		speed = 0
 	
 	
@@ -49,7 +49,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_released("down"):
 		input.y += 1
 		
-		velocity = input.normalized() * speed
+		velocity = input.normalized() * speed * delta
 		speed = 0
 	
 	
