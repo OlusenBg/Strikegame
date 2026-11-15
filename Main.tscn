@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bupe2hnvcg4qy"]
 
 [ext_resource type="PackedScene" uid="uid://dqb7bb84gw7hh" path="res://player.tscn" id="1_glv2v"]
-[ext_resource type="Script" uid="uid://keusc4qhk3oi" path="res://CameraMovement.gd" id="1_uu6xs"]
+[ext_resource type="Script" uid="uid://keusc4qhk3oi" path="res://general.gd" id="1_uu6xs"]
 [ext_resource type="Texture2D" uid="uid://cfmet0rjvr08g" path="res://Sprites/Light v2.jpg" id="3_lgr22"]
 [ext_resource type="PackedScene" uid="uid://ce4hk6tf8lxq" path="res://bouncewalls.tscn" id="3_r0du0"]
 [ext_resource type="PackedScene" uid="uid://vypgufko4wtq" path="res://normalwalls.tscn" id="4_cm0pq"]
@@ -58,6 +58,36 @@ offset_bottom = 221.0
 theme_override_font_sizes/font_size = 64
 text = "Retry"
 
+[node name="You_win_screen" type="Node2D" parent="Camera2D" unique_id=1954727507]
+
+[node name="Label" type="Label" parent="Camera2D/You_win_screen" unique_id=1479706546]
+z_index = 32
+offset_left = -203.0
+offset_top = -190.0
+offset_right = 183.0
+offset_bottom = -102.0
+theme_override_colors/font_color = Color(0.11262386, 0.5329654, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "You won"
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D/You_win_screen" unique_id=969936212]
+modulate = Color(0.3515629, 0.3515629, 0.35156286, 1)
+z_index = 27
+position = Vector2(-27.999977, 25.000015)
+scale = Vector2(7.0400004, 4.59)
+texture = ExtResource("6_3dxm6")
+
+[node name="Button" type="Button" parent="Camera2D/You_win_screen" unique_id=596092156]
+process_mode = 2
+z_index = 42
+offset_left = -113.0
+offset_top = 40.0
+offset_right = 119.0
+offset_bottom = 136.0
+theme_override_font_sizes/font_size = 64
+text = "Restart"
+
 [node name="tutorial" type="Node2D" parent="." unique_id=990749453]
 
 [node name="walls" parent="tutorial" unique_id=189394994 instance=ExtResource("3_r0du0")]
@@ -79,7 +109,7 @@ theme_override_colors/font_color = Color(0.3529412, 0.3529412, 0.3529412, 1)
 theme_override_font_sizes/font_size = 32
 text = "              Welcome,
        use wasd to charge
-       use arrows to move"
+      "
 metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="tutorial" unique_id=1363766885]
@@ -212,8 +242,24 @@ rotation = 1.5707964
 scale = Vector2(1.3, 0.764)
 
 [node name="Door" parent="tutorial" unique_id=713834427 instance=ExtResource("8_trn2v")]
-position = Vector2(-921, -1583.0001)
+position = Vector2(-780, -1581)
 scale = Vector2(3, 3)
+
+[node name="Label4" type="Label" parent="tutorial" unique_id=282831180]
+offset_left = -680.0
+offset_top = -1648.0
+offset_right = -427.0
+offset_bottom = -1625.0
+theme_override_colors/font_color = Color(0.3529412, 0.3529412, 0.3529412, 1)
+theme_override_font_sizes/font_size = 32
+text = "Doors bring 
+you to the next level"
+horizontal_alignment = 1
+
+[node name="spiked_walls3" parent="tutorial" unique_id=1278051725 instance=ExtResource("5_fos0i")]
+position = Vector2(232.00006, -1704)
+rotation = -2.3561945
+scale = Vector2(0.99999994, 0.99999994)
 
 [node name="Backround" type="Sprite2D" parent="." unique_id=611222141]
 visible = false
@@ -223,8 +269,321 @@ material = SubResource("CanvasItemMaterial_03owx")
 scale = Vector2(30, 30)
 texture = ExtResource("6_3dxm6")
 
-[node name="spiked_walls2" parent="." unique_id=1278051725 instance=ExtResource("5_fos0i")]
-position = Vector2(232.00006, -1704)
+[node name="Level_1" type="Node2D" parent="." unique_id=954577622]
+
+[node name="Normalwalls" parent="Level_1" unique_id=1836213340 instance=ExtResource("4_cm0pq")]
+position = Vector2(-120, 6671)
+scale = Vector2(0.5, 2)
+
+[node name="Normalwalls2" parent="Level_1" unique_id=1025038739 instance=ExtResource("4_cm0pq")]
+position = Vector2(-565, 6124)
+scale = Vector2(0.5, 2)
+
+[node name="Normalwalls3" parent="Level_1" unique_id=1525379931 instance=ExtResource("4_cm0pq")]
+position = Vector2(-896, 6667)
+scale = Vector2(0.5, 2)
+
+[node name="Normalwalls4" parent="Level_1" unique_id=735763324 instance=ExtResource("4_cm0pq")]
+position = Vector2(-160, 5679)
+scale = Vector2(0.5, 2)
+
+[node name="Normalwalls5" parent="Level_1" unique_id=1771220621 instance=ExtResource("4_cm0pq")]
+position = Vector2(515, 6353)
+scale = Vector2(0.5, 2)
+
+[node name="Normalwalls6" parent="Level_1" unique_id=158920143 instance=ExtResource("4_cm0pq")]
+position = Vector2(274, 7210)
+scale = Vector2(0.5, 2)
+
+[node name="Normalwalls7" parent="Level_1" unique_id=1865294813 instance=ExtResource("4_cm0pq")]
+position = Vector2(-681, 7189)
+scale = Vector2(0.5, 2)
+
+[node name="Normalwalls10" parent="Level_1" unique_id=460962363 instance=ExtResource("4_cm0pq")]
+position = Vector2(714, 6821)
+scale = Vector2(0.5, 2)
+
+[node name="Normalwalls11" parent="Level_1" unique_id=1553276064 instance=ExtResource("4_cm0pq")]
+position = Vector2(-1133, 5940)
+scale = Vector2(0.5, 2)
+
+[node name="Normalwalls12" parent="Level_1" unique_id=1702511338 instance=ExtResource("4_cm0pq")]
+position = Vector2(-1271, 6813)
+scale = Vector2(0.5, 2)
+
+[node name="Normalwalls13" parent="Level_1" unique_id=1241298471 instance=ExtResource("4_cm0pq")]
+position = Vector2(-265, 7235)
+scale = Vector2(0.5, 2)
+
+[node name="Normalwalls14" parent="Level_1" unique_id=2083200286 instance=ExtResource("4_cm0pq")]
+position = Vector2(889, 5740)
+scale = Vector2(0.5, 2)
+
+[node name="Normalwalls8" parent="Level_1" unique_id=530736243 instance=ExtResource("4_cm0pq")]
+position = Vector2(278, 6045)
+scale = Vector2(0.5, 2)
+
+[node name="Normalwalls9" parent="Level_1" unique_id=978149608 instance=ExtResource("4_cm0pq")]
+position = Vector2(983, 6537)
+scale = Vector2(0.5, 2)
+
+[node name="Normalwalls33" parent="Level_1" unique_id=1759078029 instance=ExtResource("4_cm0pq")]
+position = Vector2(75, 4939)
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls37" parent="Level_1" unique_id=1617851014 instance=ExtResource("4_cm0pq")]
+position = Vector2(1067.0001, 4938)
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls38" parent="Level_1" unique_id=466786040 instance=ExtResource("4_cm0pq")]
+position = Vector2(737.00006, 4939)
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls39" parent="Level_1" unique_id=1440529161 instance=ExtResource("4_cm0pq")]
+position = Vector2(405.00003, 4938)
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls34" parent="Level_1" unique_id=777470823 instance=ExtResource("4_cm0pq")]
+position = Vector2(-256, 4939)
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls35" parent="Level_1" unique_id=1510146084 instance=ExtResource("4_cm0pq")]
+position = Vector2(-583, 4939)
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls36" parent="Level_1" unique_id=581232398 instance=ExtResource("4_cm0pq")]
+position = Vector2(-917, 4939)
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls47" parent="Level_1" unique_id=305045871 instance=ExtResource("4_cm0pq")]
+position = Vector2(-1245, 4680.0005)
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls75" parent="Level_1" unique_id=196285502 instance=ExtResource("4_cm0pq")]
+position = Vector2(-914, 4681)
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls46" parent="Level_1" unique_id=113947818 instance=ExtResource("4_cm0pq")]
+position = Vector2(-591, 7634)
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls45" parent="Level_1" unique_id=698240052 instance=ExtResource("4_cm0pq")]
+position = Vector2(-264, 7634)
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls44" parent="Level_1" unique_id=2029785987 instance=ExtResource("4_cm0pq")]
+position = Vector2(397.00003, 7633)
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls43" parent="Level_1" unique_id=924691250 instance=ExtResource("4_cm0pq")]
+position = Vector2(729.00006, 7634)
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls42" parent="Level_1" unique_id=1259467879 instance=ExtResource("4_cm0pq")]
+position = Vector2(1059.0001, 7633)
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls65" parent="Level_1" unique_id=1059412281 instance=ExtResource("4_cm0pq")]
+position = Vector2(2011, 6311)
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls68" parent="Level_1" unique_id=1156505476 instance=ExtResource("4_cm0pq")]
+position = Vector2(1349, 6311)
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls67" parent="Level_1" unique_id=2060037013 instance=ExtResource("4_cm0pq")]
+position = Vector2(1681, 6312)
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls66" parent="Level_1" unique_id=1481079668 instance=ExtResource("4_cm0pq")]
+position = Vector2(2058, 6640.0005)
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls64" parent="Level_1" unique_id=311573201 instance=ExtResource("4_cm0pq")]
+position = Vector2(1727, 6640)
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls61" parent="Level_1" unique_id=1495280225 instance=ExtResource("4_cm0pq")]
+position = Vector2(1398, 6638)
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls41" parent="Level_1" unique_id=1234539555 instance=ExtResource("4_cm0pq")]
+position = Vector2(67, 7634)
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls40" parent="Level_1" unique_id=1834440466 instance=ExtResource("4_cm0pq")]
+position = Vector2(-1256, 7634)
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls48" parent="Level_1" unique_id=945888097 instance=ExtResource("4_cm0pq")]
+position = Vector2(-1404, 7428.0005)
+rotation = -1.5707964
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls69" parent="Level_1" unique_id=2021810091 instance=ExtResource("4_cm0pq")]
+position = Vector2(-1126, 7811.0005)
+rotation = -1.5707964
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls70" parent="Level_1" unique_id=1823212878 instance=ExtResource("4_cm0pq")]
+position = Vector2(-742, 7811.0005)
+rotation = -1.5707964
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls71" parent="Level_1" unique_id=622065415 instance=ExtResource("4_cm0pq")]
+position = Vector2(-1127.0001, 8470.001)
+rotation = -1.5707964
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls72" parent="Level_1" unique_id=2004178614 instance=ExtResource("4_cm0pq")]
+position = Vector2(-743.00006, 8470)
+rotation = -1.5707964
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls73" parent="Level_1" unique_id=1701176807 instance=ExtResource("4_cm0pq")]
+position = Vector2(-1126, 8140)
+rotation = -1.5707964
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls74" parent="Level_1" unique_id=336065244 instance=ExtResource("4_cm0pq")]
+position = Vector2(-742, 8140)
+rotation = -1.5707964
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls49" parent="Level_1" unique_id=1392676408 instance=ExtResource("4_cm0pq")]
+position = Vector2(-1396.0001, 5780.0005)
+rotation = -1.5707964
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls50" parent="Level_1" unique_id=1292789958 instance=ExtResource("4_cm0pq")]
+position = Vector2(-1397.0001, 6109)
+rotation = -1.5707964
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls55" parent="Level_1" unique_id=1826423571 instance=ExtResource("4_cm0pq")]
+position = Vector2(-1397, 5446.9995)
+rotation = -1.5707964
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls54" parent="Level_1" unique_id=1288981932 instance=ExtResource("4_cm0pq")]
+position = Vector2(-1396, 5118)
+rotation = -1.5707964
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls51" parent="Level_1" unique_id=576142350 instance=ExtResource("4_cm0pq")]
+position = Vector2(-1399, 6439.0005)
+rotation = -1.5707964
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls52" parent="Level_1" unique_id=446032134 instance=ExtResource("4_cm0pq")]
+position = Vector2(-1400, 6767.0005)
+rotation = -1.5707964
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls53" parent="Level_1" unique_id=1925180233 instance=ExtResource("4_cm0pq")]
+position = Vector2(-1403, 7098.0005)
+rotation = -1.5707964
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls63" parent="Level_1" unique_id=609225792 instance=ExtResource("4_cm0pq")]
+position = Vector2(1190, 7094.0005)
+rotation = -1.5707964
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls62" parent="Level_1" unique_id=213739562 instance=ExtResource("4_cm0pq")]
+position = Vector2(1193, 6763.0005)
+rotation = -1.5707964
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls60" parent="Level_1" unique_id=634716148 instance=ExtResource("4_cm0pq")]
+position = Vector2(1197, 5114)
+rotation = -1.5707964
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls59" parent="Level_1" unique_id=1142129063 instance=ExtResource("4_cm0pq")]
+position = Vector2(1196, 5442.9995)
+rotation = -1.5707964
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls58" parent="Level_1" unique_id=490144723 instance=ExtResource("4_cm0pq")]
+position = Vector2(1195.9999, 6105)
+rotation = -1.5707964
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls57" parent="Level_1" unique_id=392280655 instance=ExtResource("4_cm0pq")]
+position = Vector2(1196.9999, 5776.0005)
+rotation = -1.5707964
+scale = Vector2(1.3, 0.764)
+
+[node name="Normalwalls56" parent="Level_1" unique_id=254730274 instance=ExtResource("4_cm0pq")]
+position = Vector2(1189, 7424.0005)
+rotation = -1.5707964
+scale = Vector2(1.3, 0.764)
+
+[node name="spiked_walls" parent="Level_1" unique_id=232790207 instance=ExtResource("5_fos0i")]
+position = Vector2(2122, 6457)
+rotation = -1.5707964
+
+[node name="spiked_walls4" parent="Level_1" unique_id=808794803 instance=ExtResource("5_fos0i")]
+position = Vector2(-752, 4770)
+rotation = -1.5707964
+
+[node name="Label" type="Label" parent="Level_1" unique_id=1572547798]
+offset_left = 1178.0
+offset_top = 6432.0
+offset_right = 1483.0
+offset_bottom = 6497.0
+theme_override_colors/font_color = Color(0.3529412, 0.3529412, 0.3529412, 1)
+theme_override_font_sizes/font_size = 32
+text = "Your almost there!!!"
+horizontal_alignment = 1
+
+[node name="Backround2" type="Sprite2D" parent="Level_1" unique_id=1944233468]
+z_index = -6
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_03owx")
+position = Vector2(139.50002, 6538)
+scale = Vector2(22, 22.285)
+texture = ExtResource("6_3dxm6")
+
+[node name="walls" parent="Level_1" unique_id=1277043700 instance=ExtResource("3_r0du0")]
+position = Vector2(1060, 5073.0005)
 rotation = -2.3561945
+left_tilted = true
+
+[node name="walls4" parent="Level_1" unique_id=275793079 instance=ExtResource("3_r0du0")]
+position = Vector2(-1266, 4812.9995)
+rotation = -3.926991
+right_tilted = true
+
+[node name="walls2" parent="Level_1" unique_id=704967200 instance=ExtResource("3_r0du0")]
+position = Vector2(-480, 7196)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="walls3" parent="Level_1" unique_id=1881461657 instance=ExtResource("3_r0du0")]
+position = Vector2(1043.9996, 7479)
+rotation = -0.7853982
+right_tilted = true
+
+[node name="spiked_walls2" parent="Level_1" unique_id=537969710 instance=ExtResource("5_fos0i")]
+position = Vector2(215, 7429)
+rotation = -1.5707964
+
+[node name="spiked_walls3" parent="Level_1" unique_id=231789086 instance=ExtResource("5_fos0i")]
+position = Vector2(319, 7454)
+rotation = 1.5707964
+
+[node name="Door" parent="Level_1" unique_id=2119880402 instance=ExtResource("8_trn2v")]
+position = Vector2(-937, 8481)
+scale = Vector2(4, 4)
+
+[node name="spawn1" type="Node2D" parent="Level_1" unique_id=213490279]
+position = Vector2(-161, 6159)
+
+[node name="Normalwalls76" parent="Level_1" unique_id=1399794781 instance=ExtResource("4_cm0pq")]
+position = Vector2(-1393, 4794)
+rotation = -1.5707964
+scale = Vector2(1.3, 0.764)
 
 [connection signal="pressed" from="Camera2D/You_lost_screen/Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="Camera2D/You_win_screen/Button" to="." method="_on_button_pressed"]
