@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://vypgufko4wtq" path="res://normalwalls.tscn" id="4_cm0pq"]
 [ext_resource type="PackedScene" uid="uid://8a146ljcpp1v" path="res://spiked_walls.tscn" id="5_fos0i"]
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_epmtf"]
+
 [node name="Game" type="Node2D" unique_id=1622507801]
 position = Vector2(0, 4)
 script = ExtResource("1_uu6xs")
@@ -24,12 +26,40 @@ offset_bottom = 309.0
 theme_override_font_sizes/font_size = 64
 text = "Speed: "
 
+[node name="You_lost_screen" type="Node2D" parent="Camera2D" unique_id=1264646231]
+
+[node name="Label" type="Label" parent="Camera2D/You_lost_screen" unique_id=999464421]
+z_index = 32
+offset_left = -210.0
+offset_top = -52.0
+offset_right = 176.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0.83127165, 0, 0.0024218431, 1)
+theme_override_font_sizes/font_size = 64
+text = "You're DEAD"
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D/You_lost_screen" unique_id=1705871618]
+modulate = Color(0.3515629, 0.3515629, 0.35156286, 1)
+z_index = 27
+position = Vector2(61.000015, 8.5)
+scale = Vector2(1352, 727)
+texture = SubResource("CanvasTexture_epmtf")
+
+[node name="Retry" type="Button" parent="Camera2D/You_lost_screen" unique_id=260028089]
+process_mode = 2
+z_index = 35
+offset_left = -226.0
+offset_top = 117.0
+offset_right = 244.0
+offset_bottom = 221.0
+theme_override_font_sizes/font_size = 64
+text = "Retry"
+
 [node name="tutorial" type="Node2D" parent="." unique_id=990749453]
 
 [node name="walls" parent="tutorial" unique_id=189394994 instance=ExtResource("3_r0du0")]
-position = Vector2(82.999756, 184.99994)
+position = Vector2(2119, -598)
 rotation = -0.7853982
-right_tilted = true
 
 [node name="walls2" parent="tutorial" unique_id=172413421 instance=ExtResource("3_r0du0")]
 position = Vector2(-16, -1165)
@@ -38,9 +68,9 @@ scale = Vector2(1.3, 1)
 
 [node name="Label" type="Label" parent="tutorial" unique_id=3059984]
 offset_left = -196.0
-offset_top = -310.0
+offset_top = -262.0
 offset_right = 197.0
-offset_bottom = -217.0
+offset_bottom = -121.0
 theme_override_font_sizes/font_size = 32
 text = "              Welcome,
        use wasd to charge
@@ -106,3 +136,5 @@ offset_bottom = -1001.0
 theme_override_font_sizes/font_size = 32
 text = "Spiked walls 
        kill you"
+
+[connection signal="pressed" from="Camera2D/You_lost_screen/Retry" to="." method="_on_retry_pressed"]
