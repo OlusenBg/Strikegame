@@ -37,3 +37,7 @@ func _on_retry_pressed() -> void:
 func _on_button_pressed() -> void:
 	get_tree().paused = false
 	get_tree().reload_current_scene()
+
+
+func _on_main_music_finished() -> void:
+	$MainMusic.play()
