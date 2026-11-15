@@ -1,9 +1,13 @@
 extends CharacterBody2D
 
-@export var speed_increase = 100
+@export var speed_increase = 75
 @export var speed: float = 0
-@export var speed_limit = 5000
+@export var speed_limit = 3000
 var charged = false
+var dead = false
+
+func _ready() -> void:
+	dead = false
 
 func _physics_process(delta: float) -> void:
 	var input := Vector2.ZERO
@@ -83,7 +87,9 @@ func _physics_process(delta: float) -> void:
 		if velocity.x == 0 && velocity.y == 0:
 			charged = false
 	
-	
+	if dead:
+		velocity.x = 0
+		velocity.y = 0
 	
 	
 	move_and_slide()

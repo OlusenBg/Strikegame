@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://vypgufko4wtq"]
 
-[ext_resource type="Texture2D" uid="uid://db8i5dd0vnqd0" path="res://icon.svg" id="1_gj5id"]
+[ext_resource type="Texture2D" uid="uid://dxd51hptj5s0b" path="res://Sprites/Wall normal.png" id="1_gj5id"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t71yc"]
 size = Vector2(254, 67)
@@ -8,8 +8,10 @@ size = Vector2(254, 67)
 [node name="Normalwalls" type="StaticBody2D" unique_id=974586526]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1939950930]
-position = Vector2(-11.099997, -3.2999973)
-scale = Vector2(2.0640626, 0.5515625)
+texture_filter = 1
+position = Vector2(-8.561241, -2.4500618)
+rotation = 1.5707964
+scale = Vector2(3.371759, 3.1777105)
 texture = ExtResource("1_gj5id")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=129869234]

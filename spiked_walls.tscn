@@ -15,9 +15,9 @@ shape = SubResource("RectangleShape2D_t71yc")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1347106826]
 texture_filter = 1
-position = Vector2(-13.099968, 13.75)
+position = Vector2(-13.8895035, 15.2763195)
 rotation = -1.5707964
-scale = Vector2(3.4312494, 3.367188)
+scale = Vector2(3.2707229, 3.2915297)
 texture = ExtResource("2_3jfk2")
 
 [connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
