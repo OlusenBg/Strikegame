@@ -60,16 +60,16 @@ func _physics_process(delta: float) -> void:
 	if charged == false:
 		if move_right:
 			input.x += 1
-			speed = 200
+			speed = 350
 		if move_left:
 			input.x -= 1
-			speed = 200
+			speed = 350
 		if move_down:
 			input.y += 1
-			speed = 200
+			speed = 350
 		if move_up:
 			input.y -= 1
-			speed = 200
+			speed = 350
 		velocity = input.normalized() * speed
 		
 	

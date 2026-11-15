@@ -6,6 +6,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t71yc"]
 size = Vector2(261, 67)
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_d8fxv"]
+polygon = PackedVector2Array(-120, -31, -127, -27, -127, -20, -121, -16, -3, -16, -3, -4, -114, -4, -127, 10, -127, 17, -114, 32, 115, 32, 128, 18, 128, 10, 114, -4, 1, -4, 1, -16, 121, -16, 128, -20, 128, -27, 121, -31)
+
 [node name="walls" type="Area2D" unique_id=1277043700]
 script = ExtResource("1_oitg0")
 
@@ -19,5 +22,8 @@ texture = ExtResource("2_oitg0")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1512216907]
 position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_t71yc")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=69567039]
+occluder = SubResource("OccluderPolygon2D_d8fxv")
 
 [connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]

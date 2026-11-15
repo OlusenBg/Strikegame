@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://s4q86wu8t2x7"]
+
+[ext_resource type="Script" uid="uid://bfcdix6bl4iow" path="res://area_2d.gd" id="1_ba8gm"]
+[ext_resource type="Texture2D" uid="uid://bsait3sp7flr1" path="res://Sprites/Door 7.png" id="2_v6xrn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6xrn"]
+size = Vector2(40, 89)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_t71yc"]
+polygon = PackedVector2Array(20, -45, 20, 44, -21, 44, -21, -45)
+
+[node name="Door" type="Area2D" unique_id=713834427]
+script = ExtResource("1_ba8gm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1055201713]
+texture_filter = 1
+texture = ExtResource("2_v6xrn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1634707816]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_v6xrn")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=1828386496]
+occluder = SubResource("OccluderPolygon2D_t71yc")
+
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
